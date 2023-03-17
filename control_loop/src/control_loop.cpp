@@ -46,7 +46,7 @@ f_ref.close();
 
 cout<<"Starting Output: "<<_output<<"\n Starting Input: "<<_input<<"\n";
 
-f_output.open("Output-txt");
+f_output.open("Output.txt");
 f_error.open("Error.txt");
 f_ref.open("Ref.txt");
 
