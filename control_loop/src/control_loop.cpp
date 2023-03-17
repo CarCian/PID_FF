@@ -33,18 +33,22 @@ _input=0;
 int N=0;
 
 //To empty old data
-ofstream f_output("Output-txt");
+ofstream f_output("Output.txt");
 ofstream f_error("Error.txt");
+ofstream f_ref("Ref.txt");
 f_output<<"";
 f_error<<"";
+f_ref<<"";
 f_error.close();
 f_output.close();
+f_ref.close();
 //
 
 cout<<"Starting Output: "<<_output<<"\n Starting Input: "<<_input<<"\n";
 
 f_output.open("Output-txt");
 f_error.open("Error.txt");
+f_ref.open("Ref.txt");
 
 while( abs(err-old_err)>0.001 || N==0){
 
@@ -52,6 +56,7 @@ while( abs(err-old_err)>0.001 || N==0){
 
 f_output<<_output<<endl;
 f_error<<err<<endl;
+f_ref<<_xdes<<endl;
 
 //
 
@@ -74,6 +79,7 @@ N++;
 
 f_error.close();
 f_output.close();
+f_ref.close();
 
 cout<<"RISE TIME cd ..:"<<N*_dt<<"\n";
 
